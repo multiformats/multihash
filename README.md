@@ -1,6 +1,8 @@
 # multihash
 
-Multihash is a protocol for differentiating outputs from various well-established cryptographic hash functions, addressing size + encoding considerations. See https://github.com/jbenet/random-ideas/issues/1 for a longer discussion.
+Multihash is a protocol for differentiating outputs from various well-established cryptographic hash functions, addressing size + encoding considerations.
+
+It is useful to write applications that future-proof their use of hashes, and allow multiple hash functions to coexist. See https://github.com/jbenet/random-ideas/issues/1 for a longer discussion.
 
 ## Example
 
@@ -72,6 +74,6 @@ They disagree. :(
 
 ## Disclaimers
 
-Warning: obviously multihash values bias the first two bytes. Do not expect them to be uniformly distributed. The entropy size is `len(multihash) - 2`. Skip the first two bytes when using them with bloom filters, etc. Why not _ap_pend instead of _pre_pend? Because when reading a stream of hashes, you can know the length of the hash (from the table).
+Warning: **obviously multihash values bias the first two bytes**. Do not expect them to be uniformly distributed. The entropy size is `len(multihash) - 2`. Skip the first two bytes when using them with bloom filters, etc. Why not _ap_pend instead of _pre_pend? Because when reading a stream of hashes, you can know the length of the hash (from the table).
 
 License: MIT
