@@ -34,7 +34,7 @@ Because you end up with a function code really meaning "function-and-digest-size
 
 > What if we need more?
 
-Let's decide if we need 128 hash functions or digest sizes.
+Let's decide that when we have 128 hash functions or digest sizes.
 
 > Why isn't the size first?
 
