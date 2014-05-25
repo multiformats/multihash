@@ -28,6 +28,15 @@ EiAsJrRraP/Gj/mbRTwdMEE0E0ItcGSDv6D5il6IYmbnrg== # sha256 in base64
 <1-byte hash function code><1-byte digest size in bytes><hash function output>
 ```
 
+Binary example (only 4 bytes for simplicity):
+
+```
+fn code  dig size hash digest
+-------- -------- ------------------------------------
+00010001 00000100 101101100 11111000 01011100 10110101 
+sha1     4 bytes  4 byte sha1 digest
+```
+
 > Why have digest size as a separate byte?
 
 Because you end up with a function code really meaning "function-and-digest-size-code". Makes using custom digest sizes annoying, and is less flexible.
