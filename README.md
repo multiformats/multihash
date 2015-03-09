@@ -53,6 +53,7 @@ Because aesthetically I prefer the code first. You already have to write your st
 
 - [go-multihash](//github.com/jbenet/go-multihash)
 - [node-multihash](//github.com/jbenet/node-multihash)
+- [clj-multihash](//github.com/greglook/clj-multihash)
 
 
 ## table for Multihash v1.0.0-RC (semver)
