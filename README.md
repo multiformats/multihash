@@ -56,6 +56,7 @@ Because aesthetically I prefer the code first. You already have to write your st
 - [clj-multihash](//github.com/greglook/clj-multihash)
 - [rust-multihash](//github.com/google/rust-multihash)
 - [haskell-multihash](//github.com/LukeHoersten/multihash)
+- [python-multihash](//github.com/tehmaze/python-multihash)
 
 
 ## table for Multihash v1.0.0-RC (semver)
