@@ -33,7 +33,7 @@ Binary example (only 4 bytes for simplicity):
 ```
 fn code  dig size hash digest
 -------- -------- ------------------------------------
-00010001 00000100 101101100 11111000 01011100 10110101 
+00010001 00000100 101101100 11111000 01011100 10110101
 sha1     4 bytes  4 byte sha1 digest
 ```
 
@@ -57,7 +57,7 @@ Because aesthetically I prefer the code first. You already have to write your st
 - [rust-multihash](//github.com/google/rust-multihash)
 - [haskell-multihash](//github.com/LukeHoersten/multihash)
 - [python-multihash](//github.com/tehmaze/python-multihash)
-
+- [elixir-multihash](//github.com/zabirauf/ex_multihash)
 
 ## table for Multihash v1.0.0-RC (semver)
 
