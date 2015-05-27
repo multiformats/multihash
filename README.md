@@ -58,6 +58,7 @@ Because aesthetically I prefer the code first. You already have to write your st
 - [haskell-multihash](//github.com/LukeHoersten/multihash)
 - [python-multihash](//github.com/tehmaze/python-multihash)
 - [elixir-multihash](//github.com/zabirauf/ex_multihash)
+- [swift-multihash](//github.com/NeoTeo/SwiftMultihash)
 
 ## table for Multihash v1.0.0-RC (semver)
 
