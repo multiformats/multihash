@@ -47,7 +47,7 @@ Let's decide that when we have 128 hash functions or digest sizes.
 
 > Why isn't the size first?
 
-Because aesthetically I prefer the code first. You already have to write your stream parsing code to understand that a singe byte already means "a length in bytes more to skip". Reversing these doesn't buy you much.
+Because aesthetically I prefer the code first. You already have to write your stream parsing code to understand that a single byte already means "a length in bytes more to skip". Reversing these doesn't buy you much.
 
 ## Implementations:
 
