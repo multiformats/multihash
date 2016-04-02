@@ -60,6 +60,7 @@ Because aesthetically I prefer the code first. You already have to write your st
 - [elixir-multihash](//github.com/zabirauf/ex_multihash), [elixir-multihashing](//github.com/candeira/ex_multihashing)
 - [swift-multihash](//github.com/NeoTeo/SwiftMultihash)
 - [ruby-multihash](//github.com/neocities/ruby-multihash)
+- [php-multihash](//github.com/Fil/php-multihash)
 
 ## table for Multihash v1.0.0-RC (semver)
 
