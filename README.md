@@ -62,6 +62,7 @@ Because aesthetically I prefer the code first. You already have to write your st
 - [ruby-multihash](//github.com/neocities/ruby-multihash)
 - [MultiHash.Net](//github.com/MCGPPeters/MultiHash.Net)
 - [scala-multihash](//github.com/mediachain/scala-multihash)
+- [php-multihash](//github.com/Fil/php-multihash)
 
 ## table for Multihash v1.0.0-RC (semver)
 
