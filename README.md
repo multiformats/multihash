@@ -54,7 +54,9 @@ Because aesthetically I prefer the code first. You already have to write your st
 - [go-multihash](//github.com/jbenet/go-multihash)
 - [node-multihash](//github.com/jbenet/node-multihash)
 - [clj-multihash](//github.com/greglook/clj-multihash)
-- [rust-multihash](//github.com/Dignifiedquire/rust-multihash)
+- rust-multihash
+  - [by @dignifiedquire](//github.com/dignifiedquire/rust-multihash)
+  - [by @google](//github.com/google/rust-multihash)
 - [haskell-multihash](//github.com/LukeHoersten/multihash)
 - [python-multihash](//github.com/tehmaze/python-multihash)
 - [elixir-multihash](//github.com/zabirauf/ex_multihash)
