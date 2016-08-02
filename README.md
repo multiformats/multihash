@@ -12,7 +12,7 @@
 
 Multihash is a protocol for differentiating outputs from various well-established cryptographic hash functions, addressing size + encoding considerations.
 
-It is useful to write applications that future-proof their use of hashes, and allow multiple hash functions to coexist. See [this GitHub thread](https://github.com/jbenet/random-ideas/issues/1) for a longer discussion.
+It is useful to write applications that future-proof their use of hashes, and allow multiple hash functions to coexist. See [jbenet/random-ideas#1](https://github.com/jbenet/random-ideas/issues/1) for a longer discussion.
 
 ## Table of Contents
 
