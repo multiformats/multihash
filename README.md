@@ -1,10 +1,13 @@
 # multihash
 
+<<<<<<< HEAD
 [![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg?style=flat-square)](http://ipn.io)
 [![](https://img.shields.io/badge/project-multiformats-blue.svg?style=flat-square)](https://github.com/multiformats/multiformats)
 [![](https://img.shields.io/badge/freenode-%23ipfs-blue.svg?style=flat-square)](https://webchat.freenode.net/?channels=%23ipfs)
 [![](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
+=======
+>>>>>>> Fixed github tagline
 > Self identifying hashes
 
 Multihash is a protocol for differentiating outputs from various well-established cryptographic hash functions, addressing size + encoding considerations.
