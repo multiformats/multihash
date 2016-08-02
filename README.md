@@ -37,6 +37,10 @@ fn code  dig size hash digest
 sha1     4 bytes  4 byte sha1 digest
 ```
 
+The standard encoding is base-58, using the [Bitcoin character set](https://en.bitcoin.it/wiki/Base58Check_encoding#Base58_symbol_chart).
+
+## FAQ
+
 > Why have digest size as a separate byte?
 
 Because you end up with a function code really meaning "function-and-digest-size-code". Makes using custom digest sizes annoying, and is less flexible.
