@@ -1,6 +1,10 @@
 The MIT License (MIT)
 
+<<<<<<< HEAD
 Copyright (c) 2016 Protocol Labs Inc.
+=======
+Copyright (c) 2016 Juan Batiz-Benet
+>>>>>>> Fixed spelling error, added MIT License file
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
