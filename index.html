@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Multihash by multiformats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Multihash</h1>
+      <h2 class="project-tagline">Self identifying hashes</h2>
+      <a href="https://github.com/multiformats/multihash" class="btn">View on GitHub</a>
+      <a href="https://github.com/multiformats/multihash/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/multiformats/multihash/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="multihash" class="anchor" href="#multihash" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>multihash</h1>
+
+<p>Multihash is a protocol for differentiating outputs from various well-established cryptographic hash functions, addressing size + encoding considerations.</p>
+
+<p>It is useful to write applications that future-proof their use of hashes, and allow multiple hash functions to coexist. See <a href="https://github.com/jbenet/random-ideas/issues/1">https://github.com/jbenet/random-ideas/issues/1</a> for a longer discussion.</p>
+
+<h2>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example</h2>
+
+<p>Outputs of <code>&lt;encoding&gt;.encode(multihash(&lt;digest&gt;, &lt;function&gt;))</code>:</p>
+
+<pre><code># sha1 - 0x11
+11140beec7b5ea3f0fdbc95d0dd47f3c5bc275da8a33 # sha1 in hex
+24a0qvp7pqn3y3yvt5egvn3z7hdw4xeuh8tg # sha1 in base32
+5dqx43zNtUUbPj97vJhpHyUUPyrmXG # sha1 in base58
+ERQL7se16j8P28ldDdR/PFvCddqKMw== # sha1 in base64
+
+# sha2-256 0x12
+12202c26b46b68ffc68ff99b453c1d30413413422d706483bfa0f98a5e886266e7ae # sha2-256 in hex
+28g2r9nmddmfzhmfz6dmaf0x610k84u25nr690xzm3wrmqm8c9kefbg # sha256 in base32
+QmRJzsvyCQyizr73Gmms8ZRtvNxmgqumxc2KUp71dfEmoj # sha256 in base58
+EiAsJrRraP/Gj/mbRTwdMEE0E0ItcGSDv6D5il6IYmbnrg== # sha256 in base64
+</code></pre>
+
+<h2>
+<a id="format" class="anchor" href="#format" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>format</h2>
+
+<pre><code>&lt;1-byte hash function code&gt;&lt;1-byte digest size in bytes&gt;&lt;hash function output&gt;
+</code></pre>
+
+<p>Binary example (only 4 bytes for simplicity):</p>
+
+<pre><code>fn code  dig size hash digest
+-------- -------- ------------------------------------
+00010001 00000100 101101100 11111000 01011100 10110101
+sha1     4 bytes  4 byte sha1 digest
+</code></pre>
+
+<blockquote>
+<p>Why have digest size as a separate byte?</p>
+</blockquote>
+
+<p>Because you end up with a function code really meaning "function-and-digest-size-code". Makes using custom digest sizes annoying, and is less flexible.</p>
+
+<blockquote>
+<p>What if we need more?</p>
+</blockquote>
+
+<p>Let's decide that when we have 128 hash functions or digest sizes.</p>
+
+<blockquote>
+<p>Why isn't the size first?</p>
+</blockquote>
+
+<p>Because aesthetically I prefer the code first. You already have to write your stream parsing code to understand that a single byte already means "a length in bytes more to skip". Reversing these doesn't buy you much.</p>
+
+<h2>
+<a id="implementations" class="anchor" href="#implementations" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Implementations:</h2>
+
+<ul>
+<li><a href="//github.com/jbenet/go-multihash">go-multihash</a></li>
+<li><a href="//github.com/jbenet/node-multihash">node-multihash</a></li>
+<li><a href="//github.com/greglook/clj-multihash">clj-multihash</a></li>
+<li>rust-multihash
+
+<ul>
+<li><a href="//github.com/dignifiedquire/rust-multihash">by @dignifiedquire</a></li>
+<li><a href="//github.com/google/rust-multihash">by @google</a></li>
+</ul>
+</li>
+<li><a href="//github.com/LukeHoersten/multihash">haskell-multihash</a></li>
+<li><a href="//github.com/tehmaze/python-multihash">python-multihash</a></li>
+<li>
+<a href="//github.com/zabirauf/ex_multihash">elixir-multihash</a>, <a href="//github.com/candeira/ex_multihashing">elixir-multihashing</a>
+</li>
+<li><a href="//github.com/NeoTeo/SwiftMultihash">swift-multihash</a></li>
+<li><a href="//github.com/neocities/ruby-multihash">ruby-multihash</a></li>
+<li><a href="//github.com/MCGPPeters/MultiHash.Net">MultiHash.Net</a></li>
+<li><a href="//github.com/mediachain/scala-multihash">scala-multihash</a></li>
+<li><a href="//github.com/Fil/php-multihash">php-multihash</a></li>
+</ul>
+
+<h2>
+<a id="table-for-multihash-v100-rc-semver" class="anchor" href="#table-for-multihash-v100-rc-semver" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>table for Multihash v1.0.0-RC (semver)</h2>
+
+<p>The current multihash table is <a href="hashtable.csv">here</a>:</p>
+
+<pre><code>code name
+0x11 sha1
+0x12 sha2-256
+0x13 sha2-512
+0x14 sha3-512
+0x15 sha3-384
+0x16 sha3-256
+0x17 sha3-224
+0x18 shake-128
+0x19 shake-256
+0x40 blake2b
+0x41 blake2s
+# 0x00-0x0f reserved for application specific functions
+# 0x10-0x3f reserved for SHA standard functions
+# 0x14 formerly had the name "sha3", now deprecated
+</code></pre>
+
+<h3>
+<a id="other-tables" class="anchor" href="#other-tables" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>other tables</h3>
+
+<p>Cannot find a good standard on this. Found some <em>different</em> IANA ones:</p>
+
+<ul>
+<li><a href="https://www.iana.org/assignments/tls-parameters/tls-parameters.xhtml#tls-parameters-18">https://www.iana.org/assignments/tls-parameters/tls-parameters.xhtml#tls-parameters-18</a></li>
+<li><a href="http://tools.ietf.org/html/rfc6920#section-9.4">http://tools.ietf.org/html/rfc6920#section-9.4</a></li>
+</ul>
+
+<p>They disagree. :(</p>
+
+<h2>
+<a id="disclaimers" class="anchor" href="#disclaimers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Disclaimers</h2>
+
+<p>Warning: <strong>obviously multihash values bias the first two bytes</strong>. Do not expect them to be uniformly distributed. The entropy size is <code>len(multihash) - 2</code>. Skip the first two bytes when using them with bloom filters, etc. Why not _ap_pend instead of _pre_pend? Because when reading a stream of hashes, you can know the length of the hash (from the table).</p>
+
+<p>License: MIT</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/multiformats/multihash">Multihash</a> is maintained by <a href="https://github.com/multiformats">multiformats</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
