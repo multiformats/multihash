@@ -33,11 +33,24 @@ SHARNESS_LIB="lib/sharness/sharness.sh"
 
 # Please put multihash specific shell functions below
 
-for hashbin in sha1sum shasum; do
-	if type "$hashbin" >/dev/null; then
-		export SHA1SUMBIN="$hashbin" &&
+if type shasum >/dev/null; then
+		export SHA1SUMBIN="shasum" &&
 		test_set_prereq SHA1SUM &&
-		break
+		export SHA256SUMBIN="shasum -a 256" &&
+		test_set_prereq SHA256SUM &&
+		export SHA512SUMBIN="shasum -a 512" &&
+		test_set_prereq SHA512SUM
+else
+	if type sha1sum >/dev/null; then
+		export SHA1SUMBIN="sha1sum" &&
+		test_set_prereq SHA1SUM
 	fi
-done
-
+	if type sha256sum >/dev/null; then
+		export SHA256SUMBIN="sha256sum" &&
+		test_set_prereq SHA256SUM
+	fi
+	if type sha512sum >/dev/null; then
+		export SHA512SUMBIN="sha512sum" &&
+		test_set_prereq SHA512SUM
+	fi
+fi
