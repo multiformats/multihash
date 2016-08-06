@@ -6,7 +6,7 @@
 
 test_description="sha1 tests"
 
-. ./lib/sharness/sharness.sh
+. lib/test-lib.sh
 
 test_expect_success "setup sha1 tests" '
 	echo "Hash me!" >hash_me.txt &&
@@ -22,9 +22,9 @@ test_expect_success "'multihash -a=sha1 -e=hex' output looks good" '
 	test_cmp expected actual
 '
 
-test_expect_success SHASUM "check hash using shasum" '
+test_expect_success SHA1SUM "check hash using '$SHA1SUMBIN'" '
 	echo "$SHA1  hash_me.txt" >expected &&
-	$SHASUMBIN hash_me.txt >actual &&
+	$SHA1SUMBIN hash_me.txt >actual &&
 	test_cmp expected actual
 '
 
