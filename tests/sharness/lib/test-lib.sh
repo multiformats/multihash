@@ -16,10 +16,21 @@ PATH=$(pwd)/bin:${PATH}
 # to pass through in some cases.
 test "$TEST_VERBOSE" = 1 && verbose=t
 
-# Assert a `multihash` tool is available in the PATH.
-type multihash >/dev/null || {
-	echo >&2 "Cannot find any 'multihash' tool in '$PATH'."
-	echo >&2 "Please make sure 'multihash' is in your PATH."
+# Assert a multihash tool, either given by the MULTIHASH_BIN env
+# variable or called 'multihash', is available.
+if test -n "$MULTIHASH_BIN"
+then
+	echo "Testing '$MULTIHASH_BIN' from MULTIHASH_BIN env variable."
+else
+	echo "Testing 'multihash' as MULTIHASH_BIN env variable is empty."
+	MULTIHASH_BIN="multihash"
+fi
+export MULTIHASH_BIN
+type "$MULTIHASH_BIN" >/dev/null || {
+	echo >&2 "Cannot find '$MULTIHASH_BIN'."
+	echo >&2 "Please make sure it is either:"
+	echo >&2 "  - a path to an executable file, or"
+	echo >&2 "  - the name of an executable file in your PATH ($PATH)."
 	exit 1
 }
 
