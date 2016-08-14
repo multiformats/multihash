@@ -22,10 +22,10 @@ QmRJzsvyCQyizr73Gmms8ZRtvNxmgqumxc2KUp71dfEmoj # sha256 in base58
 EiAsJrRraP/Gj/mbRTwdMEE0E0ItcGSDv6D5il6IYmbnrg== # sha256 in base64
 ```
 
-## format
+## Format
 
 ```
-<1-byte hash function code><1-byte digest size in bytes><hash function output>
+<varint hash function code><varint digest size in bytes><hash function output>
 ```
 
 Binary example (only 4 bytes for simplicity):
@@ -37,17 +37,25 @@ fn code  dig size hash digest
 sha1     4 bytes  4 byte sha1 digest
 ```
 
-> Why have digest size as a separate byte?
+> Why have digest size as a separate number?
 
-Because you end up with a function code really meaning "function-and-digest-size-code". Makes using custom digest sizes annoying, and is less flexible.
-
-> What if we need more?
-
-Let's decide that when we have 128 hash functions or digest sizes.
+Because otherwise you end up with a function code really meaning "function-and-digest-size-code". Makes using custom digest sizes annoying, and is less flexible.
 
 > Why isn't the size first?
 
 Because aesthetically I prefer the code first. You already have to write your stream parsing code to understand that a single byte already means "a length in bytes more to skip". Reversing these doesn't buy you much.
+
+> Why varints?
+
+So that we have no limitation on functions or lengths. Implementation note: you do not need to implement varints until the standard multihash table has more than 127 functions.
+
+> What kind of varints?
+
+An Most Significant Bit unsigned varint, as defined by the [multiformats/unsigned-varint](https://github.com/multiformats/unsigned-varint).
+
+> Don't we have to agree on a table of functions?
+
+Yes, but we already have to agree on functions, so this is not hard. The table even leaves some room for custom function codes.
 
 ## Implementations:
 
@@ -72,6 +80,7 @@ The current multihash table is [here](hashtable.csv):
 
 ```
 code name
+0x00 identity
 0x11 sha1
 0x12 sha2-256
 0x13 sha2-512
@@ -100,6 +109,6 @@ They disagree. :(
 
 ## Disclaimers
 
-Warning: **obviously multihash values bias the first two bytes**. Do not expect them to be uniformly distributed. The entropy size is `len(multihash) - 2`. Skip the first two bytes when using them with bloom filters, etc. Why not _ap_pend instead of _pre_pend? Because when reading a stream of hashes, you can know the length of the hash (from the table).
+Warning: **obviously multihash values bias the first two bytes**. Do not expect them to be uniformly distributed. The entropy size is `len(multihash) - 2`. Skip the first two bytes when using them with bloom filters, etc. Why not _ap_pend instead of _pre_pend? Because when reading a stream of hashes, you can know the length of the whole value, and allocate the right amount of memory, skip it, or discard it.
 
 License: MIT
