@@ -47,7 +47,7 @@ Because aesthetically I prefer the code first. You already have to write your st
 
 > Why varints?
 
-So that we have no limitation on functions or lengths.
+So that we have no limitation on functions or lengths. Implementation note: you do not need to implement varints until the standard multihash table has more than 127 functions.
 
 > What kind of varints?
 
