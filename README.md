@@ -112,3 +112,37 @@ They disagree. :(
 Warning: **obviously multihash values bias the first two bytes**. Do not expect them to be uniformly distributed. The entropy size is `len(multihash) - 2`. Skip the first two bytes when using them with bloom filters, etc. Why not _ap_pend instead of _pre_pend? Because when reading a stream of hashes, you can know the length of the whole value, and allocate the right amount of memory, skip it, or discard it.
 
 License: MIT
+
+## Visual Examples
+
+These are visual aids that help tell the story of why Multihash matters.
+
+![](https://raw.githubusercontent.com/multiformats/multiformats/eb22cd807db692877a9094b5bfb4d2997fd0278a/img/multihash.001.jpg)
+
+#### Consider these 4 different hashes of same input
+
+![](https://raw.githubusercontent.com/multiformats/multiformats/eb22cd807db692877a9094b5bfb4d2997fd0278a/img/multihash.002.jpg)
+
+#### Same length: 256 bits
+
+![](https://raw.githubusercontent.com/multiformats/multiformats/eb22cd807db692877a9094b5bfb4d2997fd0278a/img/multihash.003.jpg)
+
+#### Different hash functions
+
+![](https://raw.githubusercontent.com/multiformats/multiformats/eb22cd807db692877a9094b5bfb4d2997fd0278a/img/multihash.004.jpg)
+
+#### Idea: self-describe the values to distinguish
+
+![](https://raw.githubusercontent.com/multiformats/multiformats/eb22cd807db692877a9094b5bfb4d2997fd0278a/img/multihash.005.jpg)
+
+#### Multihash: fn code + length prefix
+
+![](https://raw.githubusercontent.com/multiformats/multiformats/eb22cd807db692877a9094b5bfb4d2997fd0278a/img/multihash.006.jpg)
+
+#### Multihash: a pretty good multiformat
+
+![](https://raw.githubusercontent.com/multiformats/multiformats/eb22cd807db692877a9094b5bfb4d2997fd0278a/img/multihash.007.jpg)
+
+#### Multihash: has a bunch of implementations already
+
+![](https://raw.githubusercontent.com/multiformats/multiformats/eb22cd807db692877a9094b5bfb4d2997fd0278a/img/multihash.008.jpg)
