@@ -2,14 +2,10 @@
 
 test_description="Test multihash basics"
 
-. ./lib/sharness/sharness.sh
+. lib/test-lib.sh
 
 test_expect_success "current dir is writable" '
 	echo "It works!" >test.txt
-'
-
-test_expect_success "multihash is available" '
-	type multihash
 '
 
 test_expect_success "'multihash --help' looks good" '
