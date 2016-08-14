@@ -80,6 +80,7 @@ The current multihash table is [here](hashtable.csv):
 
 ```
 code name
+0x00 identity
 0x11 sha1
 0x12 sha2-256
 0x13 sha2-512
