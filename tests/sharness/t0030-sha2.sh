@@ -16,19 +16,19 @@ test_expect_success "setup sha2 tests" '
 	echo "1340$SHA512" >expected512
 '
 
-test_expect_success "'multihash -a=sha2-256 -e=hex' works" '
-	multihash -a=sha2-256 -e=hex hash_me.txt >actual256
+test_expect_success "'$MULTIHASH_BIN -a=sha2-256 -e=hex' works" '
+	"$MULTIHASH_BIN" -a=sha2-256 -e=hex hash_me.txt >actual256
 '
 
-test_expect_success "'multihash -a=sha2-256 -e=hex' output looks good" '
+test_expect_success "'$MULTIHASH_BIN -a=sha2-256 -e=hex' output looks good" '
 	test_cmp expected256 actual256
 '
 
-test_expect_success "'multihash -a=sha2-512 -e=hex' works" '
-	multihash -a=sha2-512 -e=hex hash_me.txt >actual512
+test_expect_success "'$MULTIHASH_BIN -a=sha2-512 -e=hex' works" '
+	"$MULTIHASH_BIN" -a=sha2-512 -e=hex hash_me.txt >actual512
 '
 
-test_expect_success "'multihash -a=sha2-512 -e=hex' output looks good" '
+test_expect_success "'$MULTIHASH_BIN -a=sha2-512 -e=hex' output looks good" '
 	test_cmp expected512 actual512
 '
 

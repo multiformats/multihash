@@ -14,11 +14,11 @@ test_expect_success "setup sha1 tests" '
 	echo "1114$SHA1" >expected
 '
 
-test_expect_success "'multihash -a=sha1 -e=hex' works" '
-	multihash -a=sha1 -e=hex hash_me.txt >actual
+test_expect_success "'$MULTIHASH_BIN -a=sha1 -e=hex' works" '
+	"$MULTIHASH_BIN" -a=sha1 -e=hex hash_me.txt >actual
 '
 
-test_expect_success "'multihash -a=sha1 -e=hex' output looks good" '
+test_expect_success "'$MULTIHASH_BIN -a=sha1 -e=hex' output looks good" '
 	test_cmp expected actual
 '
 
