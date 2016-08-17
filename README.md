@@ -1,8 +1,28 @@
 # multihash
 
+[![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg?style=flat-square)](http://ipn.io)
+[![](https://img.shields.io/badge/project-multiformats-blue.svg?style=flat-square)](http://github.com/multiformats/multiformats)
+[![](https://img.shields.io/badge/freenode-%23ipfs-blue.svg?style=flat-square)](http://webchat.freenode.net/?channels=%23ipfs)
+
+> Self identifying hashes
+
 Multihash is a protocol for differentiating outputs from various well-established cryptographic hash functions, addressing size + encoding considerations.
 
 It is useful to write applications that future-proof their use of hashes, and allow multiple hash functions to coexist. See https://github.com/jbenet/random-ideas/issues/1 for a longer discussion.
+
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Example](#example)
+- [Format](#format)
+- [Implementations:](#implementations)
+- [Table for Multihash v1.0.0-RC (semver)](#table-for-multihash-v100-rc-semver)
+  - [Other tables](#other-tables)
+- [Disclaimers](#disclaimers)
+- [Visual Examples](#visual-examples)
+- [Maintainers](#maintainers)
+- [Contribute](#contribute)
+- [License](#license)
 
 ## Example
 
@@ -74,7 +94,7 @@ Yes, but we already have to agree on functions, so this is not hard. The table e
 - [scala-multihash](//github.com/mediachain/scala-multihash)
 - [php-multihash](//github.com/Fil/php-multihash)
 
-## table for Multihash v1.0.0-RC (semver)
+## Table for Multihash v1.0.0-RC (semver)
 
 The current multihash table is [here](hashtable.csv):
 
@@ -98,7 +118,7 @@ code name
 ```
 
 
-### other tables
+### Other tables
 
 Cannot find a good standard on this. Found some _different_ IANA ones:
 
@@ -110,8 +130,6 @@ They disagree. :(
 ## Disclaimers
 
 Warning: **obviously multihash values bias the first two bytes**. Do not expect them to be uniformly distributed. The entropy size is `len(multihash) - 2`. Skip the first two bytes when using them with bloom filters, etc. Why not _ap_pend instead of _pre_pend? Because when reading a stream of hashes, you can know the length of the whole value, and allocate the right amount of memory, skip it, or discard it.
-
-License: MIT
 
 ## Visual Examples
 
@@ -146,3 +164,19 @@ These are visual aids that help tell the story of why Multihash matters.
 #### Multihash: has a bunch of implementations already
 
 ![](https://raw.githubusercontent.com/multiformats/multiformats/eb22cd807db692877a9094b5bfb4d2997fd0278a/img/multihash.008.jpg)
+
+## Maintainers
+
+Captain: [@jbenet](https://github.com/jbenet).
+
+## Contribute
+
+Contributions welcome. Please check out [the issues](https://github.com/multiformats/multihash/issues).
+
+Check out our [contributing document](https://github.com/multiformats/multiformats/blob/master/contributing.md) for more information on how we work, and about contributing in general. Please be aware that all interactions related to multiformats are subject to the IPFS [Code of Conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md).
+
+Small note: If editing the Readme, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
+
+## License
+
+[MIT](LICENSE)
