@@ -29,13 +29,13 @@ It is useful to write applications that future-proof their use of hashes, and al
 Outputs of `<encoding>.encode(multihash(<digest>, <function>))`:
 
 ```
-# sha1 - 0x11
+# sha1 - 0x11 - sha1("multihash")
 111488c2f11fb2ce392acb5b2986e640211c4690073e # sha1 in hex
 CEKIRQXRD6ZM4OJKZNNSTBXGIAQRYRUQA47A==== # sha1 in base32
 5dsgvJGnvAfiR3K6HCBc4hcokSfmjj # sha1 in base58
 ERSIwvEfss45KstbKYbmQCEcRpAHPg== # sha1 in base64
 
-# sha2-256 0x12
+# sha2-256 0x12 - sha2-256("multihash")
 12209cbc07c3f991725836a3aa2a581ca2029198aa420b9d99bc0e131d9f3e2cbe47 # sha2-256 in hex
 CIQJZPAHYP4ZC4SYG2R2UKSYDSRAFEMYVJBAXHMZXQHBGHM7HYWL4RY= # sha256 in base32
 QmYtUc4iTCbbfVSDNKvtQqrfyezPPnFvE33wFmutw9PBBk # sha256 in base58
