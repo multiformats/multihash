@@ -29,17 +29,17 @@ It is useful to write applications that future-proof their use of hashes, and al
 Outputs of `<encoding>.encode(multihash(<digest>, <function>))`:
 
 ```
-# sha1 - 0x11
-11140beec7b5ea3f0fdbc95d0dd47f3c5bc275da8a33 # sha1 in hex
-24a0qvp7pqn3y3yvt5egvn3z7hdw4xeuh8tg # sha1 in base32
-5dqx43zNtUUbPj97vJhpHyUUPyrmXG # sha1 in base58
-ERQL7se16j8P28ldDdR/PFvCddqKMw== # sha1 in base64
+# sha1 - 0x11 - sha1("multihash")
+111488c2f11fb2ce392acb5b2986e640211c4690073e # sha1 in hex
+CEKIRQXRD6ZM4OJKZNNSTBXGIAQRYRUQA47A==== # sha1 in base32
+5dsgvJGnvAfiR3K6HCBc4hcokSfmjj # sha1 in base58
+ERSIwvEfss45KstbKYbmQCEcRpAHPg== # sha1 in base64
 
-# sha2-256 0x12
-12202c26b46b68ffc68ff99b453c1d30413413422d706483bfa0f98a5e886266e7ae # sha2-256 in hex
-28g2r9nmddmfzhmfz6dmaf0x610k84u25nr690xzm3wrmqm8c9kefbg # sha256 in base32
-QmRJzsvyCQyizr73Gmms8ZRtvNxmgqumxc2KUp71dfEmoj # sha256 in base58
-EiAsJrRraP/Gj/mbRTwdMEE0E0ItcGSDv6D5il6IYmbnrg== # sha256 in base64
+# sha2-256 0x12 - sha2-256("multihash")
+12209cbc07c3f991725836a3aa2a581ca2029198aa420b9d99bc0e131d9f3e2cbe47 # sha2-256 in hex
+CIQJZPAHYP4ZC4SYG2R2UKSYDSRAFEMYVJBAXHMZXQHBGHM7HYWL4RY= # sha256 in base32
+QmYtUc4iTCbbfVSDNKvtQqrfyezPPnFvE33wFmutw9PBBk # sha256 in base58
+EiCcvAfD+ZFyWDajqipYHKICkZiqQgudmbwOEx2fPiy+Rw== # sha256 in base64
 ```
 
 ## Format
