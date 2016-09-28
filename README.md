@@ -112,8 +112,7 @@ code name
 0x19 shake-256
 0x40 blake2b
 0x41 blake2s
-# 0x00-0x0f reserved for application specific functions
-# 0x10-0x3f reserved for SHA standard functions
+# 0x0400-0x040f reserved for application specific functions
 # 0x14 formerly had the name "sha3", now deprecated
 ```
 
