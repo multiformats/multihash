@@ -122,7 +122,7 @@ code name
 Cannot find a good standard on this. Found some _different_ IANA ones:
 
 - https://www.iana.org/assignments/tls-parameters/tls-parameters.xhtml#tls-parameters-18
-- http://tools.ietf.org/html/rfc6920#section-9.4
+- https://tools.ietf.org/html/rfc6920
 
 They disagree. :(
 
