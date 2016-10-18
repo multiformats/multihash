@@ -79,9 +79,9 @@ Yes, but we already have to agree on functions, so this is not hard. The table e
 
 ## Implementations:
 
-- [go-multihash](//github.com/jbenet/go-multihash)
-- [node-multihash](//github.com/jbenet/node-multihash)
-- [clj-multihash](//github.com/greglook/clj-multihash)
+- [go-multihash](//github.com/multiformats/go-multihash)
+- [js-multihash](//github.com/multiformats/js-multihash)
+- [clj-multihash](//github.com/multiformats/clj-multihash)
 - rust-multihash
   - [by @dignifiedquire](//github.com/dignifiedquire/rust-multihash)
   - [by @google](//github.com/google/rust-multihash)
