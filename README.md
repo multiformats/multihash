@@ -80,6 +80,7 @@ Yes, but we already have to agree on functions, so this is not hard. The table e
 ## Implementations:
 
 - [go-multihash](//github.com/multiformats/go-multihash)
+- [java-multihash](//github.com/multiformats/java-multihash)
 - [js-multihash](//github.com/multiformats/js-multihash)
 - [clj-multihash](//github.com/multiformats/clj-multihash)
 - rust-multihash
