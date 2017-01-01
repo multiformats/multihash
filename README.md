@@ -96,6 +96,7 @@ Yes, but we already have to agree on functions, so this is not hard. The table e
 - [cs-multihash](//github.com/tabrath/cs-multihash)
 - [scala-multihash](//github.com/mediachain/scala-multihash)
 - [php-multihash](//github.com/Fil/php-multihash)
+- [net-ipfs-core](//github.com/richardschneider/net-ipfs-core)
 
 ## Table for Multihash v1.0.0-RC (semver)
 
