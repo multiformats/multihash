@@ -93,7 +93,7 @@ Yes, but we already have to agree on functions, so this is not hard. The table e
 - [swift-multihash](//github.com/NeoTeo/SwiftMultihash)
 - [ruby-multihash](//github.com/neocities/ruby-multihash)
 - [MultiHash.Net](//github.com/MCGPPeters/MultiHash.Net)
-- [cs-multihash](//github.com/tabrath/cs-multihash)
+- [cs-multihash](//github.com/multiformats/cs-multihash)
 - [scala-multihash](//github.com/mediachain/scala-multihash)
 - [php-multihash](//github.com/Fil/php-multihash)
 
