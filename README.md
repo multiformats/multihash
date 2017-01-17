@@ -120,6 +120,9 @@ code name
 # 0x14 formerly had the name "sha3", now deprecated
 ```
 
+## Compatibility note
+
+Implementations should make sure keep the string code `sha3` as an alias for `sha3-512` so that `encode('sha3', digest) == encode('sha3-512', digest)`.
 
 ### Other tables
 
