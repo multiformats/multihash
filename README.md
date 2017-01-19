@@ -1,24 +1,26 @@
 # multihash
 
+<<<<<<< HEAD
 [![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg?style=flat-square)](http://ipn.io)
 [![](https://img.shields.io/badge/project-multiformats-blue.svg?style=flat-square)](https://github.com/multiformats/multiformats)
 [![](https://img.shields.io/badge/freenode-%23ipfs-blue.svg?style=flat-square)](https://webchat.freenode.net/?channels=%23ipfs)
 [![](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
+=======
+>>>>>>> Fixed github tagline
 > Self identifying hashes
 
 Multihash is a protocol for differentiating outputs from various well-established cryptographic hash functions, addressing size + encoding considerations.
 
-It is useful to write applications that future-proof their use of hashes, and allow multiple hash functions to coexist. See https://github.com/jbenet/random-ideas/issues/1 for a longer discussion.
+It is useful to write applications that future-proof their use of hashes, and allow multiple hash functions to coexist. See [jbenet/random-ideas#1](https://github.com/jbenet/random-ideas/issues/1) for a longer discussion.
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
 - [Example](#example)
 - [Format](#format)
 - [Implementations:](#implementations)
 - [Table for Multihash v1.0.0-RC (semver)](#table-for-multihash-v100-rc-semver)
-  - [Other tables](#other-tables)
+  - [Other Tables](#other-tables)
 - [Disclaimers](#disclaimers)
 - [Visual Examples](#visual-examples)
 - [Maintainers](#maintainers)
@@ -120,8 +122,7 @@ code name
 # 0x14 formerly had the name "sha3", now deprecated
 ```
 
-
-### Other tables
+### Other Tables
 
 Cannot find a good standard on this. Found some _different_ IANA ones:
 
@@ -132,6 +133,7 @@ They disagree. :(
 
 ## Disclaimers
 
+<<<<<<< HEAD
 Warning: **obviously multihash values bias the first two bytes**. Do not expect them to be uniformly distributed. The entropy size is `len(multihash) - 2`. Skip the first two bytes when using them with bloom filters, etc. Why not _ap_pend instead of _pre_pend? Because when reading a stream of hashes, you can know the length of the whole value, and allocate the right amount of memory, skip it, or discard it.
 
 ## Visual Examples
@@ -171,6 +173,9 @@ These are visual aids that help tell the story of why Multihash matters.
 ## Maintainers
 
 Captain: [@jbenet](https://github.com/jbenet).
+=======
+Warning: **obviously multihash values bias the first two bytes**. Do not expect them to be uniformly distributed. The entropy size is `len(multihash) - 2`. Skip the first two bytes when using them with bloom filters, etc. Why not _ap_-pend instead of _pre_-pend? Because when reading a stream of hashes, you can know the length of the hash (from the table).
+>>>>>>> Fix markdown issue with interword italics
 
 ## Contribute
 
@@ -182,5 +187,8 @@ Small note: If editing the README, please conform to the [standard-readme](https
 
 ## License
 
+<<<<<<< HEAD
 This repository is only for documents. All of these are licensed under the [CC-BY-SA 3.0](https://ipfs.io/ipfs/QmVreNvKsQmQZ83T86cWSjPu2vR3yZHGPm5jnxFuunEB9u) license © 2016 Protocol Labs Inc. Any code is under a [MIT](LICENSE) © 2016 Protocol Labs Inc.
-
+=======
+[MIT](LICENSE).
+>>>>>>> Fixed spelling error, added MIT License file
