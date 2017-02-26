@@ -1,4 +1,4 @@
-code, description, name
+codec, description, code
 sha1,               ,                         0x11
 sha2-256,           ,                         0x12
 sha2-512,           ,                         0x13
