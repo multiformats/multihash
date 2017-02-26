@@ -99,25 +99,7 @@ Yes, but we already have to agree on functions, so this is not hard. The table e
 
 ## Table for Multihash v1.0.0-RC (semver)
 
-The current multihash table is [here](hashtable.csv):
-
-```
-code name
-0x00 identity
-0x11 sha1
-0x12 sha2-256
-0x13 sha2-512
-0x14 sha3-512
-0x15 sha3-384
-0x16 sha3-256
-0x17 sha3-224
-0x18 shake-128
-0x19 shake-256
-0x40 blake2b
-0x41 blake2s
-# 0x0400-0x040f reserved for application specific functions
-# 0x14 formerly had the name "sha3", now deprecated
-```
+The current multihash table is [here](hashtable.csv).
 
 ### Other Tables
 
