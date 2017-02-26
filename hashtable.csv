@@ -1,4 +1,5 @@
 codec, description, code
+identity,           ,                         0x00
 sha1,               ,                         0x11
 sha2-256,           ,                         0x12
 sha2-512,           ,                         0x13
