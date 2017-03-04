@@ -1,5 +1,7 @@
 codec, description, code
 identity,           ,                         0x00
+md4,                ,                         0x04
+md5,                ,                         0x05
 sha1,               ,                         0x11
 sha2-256,           ,                         0x12
 sha2-512,           ,                         0x13
