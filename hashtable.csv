@@ -14,7 +14,7 @@ keccak-224,         ,                         0x1A
 keccak-256,         ,                         0x1B
 keccak-384,         ,                         0x1C
 keccak-512,         ,                         0x1D
-murmur3,            ,                         0x22
+murmur3-128,        ,                         0x22
 murmur3-32          ,                         0x23
 ,, Note: keccak has variable output length. The number specifies the core length
 blake2b-8,Blake2b consists of 64 output lengths that give different hashes,0xb201
