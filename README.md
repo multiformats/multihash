@@ -86,7 +86,7 @@ Yes, but we already have to agree on functions, so this is not hard. The table e
 - [js-multihash](//github.com/multiformats/js-multihash)
 - [clj-multihash](//github.com/multiformats/clj-multihash)
 - rust-multihash
-  - [by @dignifiedquire](//github.com/dignifiedquire/rust-multihash)
+  - [by @multiformats](//github.com/multiformats/rust-multihash)
   - [by @google](//github.com/google/rust-multihash)
 - [haskell-multihash](//github.com/LukeHoersten/multihash)
 - [python-multihash](//github.com/tehmaze/python-multihash)
