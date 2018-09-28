@@ -90,7 +90,7 @@ Yes, but we already have to agree on functions, so this is not hard. The table e
   - [by @multiformats](//github.com/multiformats/rust-multihash)
   - [by @google](//github.com/google/rust-multihash)
 - [haskell-multihash](//github.com/LukeHoersten/multihash)
-- [python-multihash](//github.com/tehmaze/python-multihash)
+- [pymultihash](//github.com/ivilata/pymultihash)
 - [elixir-multihash](//github.com/zabirauf/ex_multihash), [elixir-multihashing](//github.com/candeira/ex_multihashing)
 - [swift-multihash](//github.com/NeoTeo/SwiftMultihash)
 - [ruby-multihash](//github.com/neocities/ruby-multihash)
