@@ -104,7 +104,9 @@ Yes, but we already have to agree on functions, so this is not hard. The table e
 
 ## Table for Multihash
 
-The current multihash table is [here](hashtable.csv).
+We use a single [multicodec](https://github.com/multiformats/multicodec) table across all of our multiformat projects. The shared namespace reduces the chances of accidentally interpreting a code in the wrong context.
+
+The current table lives [here](https://github.com/multiformats/multicodec/blob/master/table.csv)
 
 ### Other Tables
 
