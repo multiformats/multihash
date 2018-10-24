@@ -100,7 +100,7 @@ Yes, but we already have to agree on functions, so this is not hard. The table e
 - [php-multihash](//github.com/Fil/php-multihash)
 - [net-ipfs-core](//github.com/richardschneider/net-ipfs-core)
 
-## Table for Multihash v1.0.0-RC (semver)
+## Table for Multihash
 
 The current multihash table is [here](hashtable.csv).
 
