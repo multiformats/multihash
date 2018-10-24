@@ -42,6 +42,8 @@ QmYtUc4iTCbbfVSDNKvtQqrfyezPPnFvE33wFmutw9PBBk # sha256 in base58
 EiCcvAfD+ZFyWDajqipYHKICkZiqQgudmbwOEx2fPiy+Rw== # sha256 in base64
 ```
 
+Note: You should consider using [multibase](https://github.com/multiformats/multibase) to base-encode these hashes instead of base-encoding them directly.
+
 ## Format
 
 ```
