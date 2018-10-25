@@ -42,6 +42,8 @@ QmYtUc4iTCbbfVSDNKvtQqrfyezPPnFvE33wFmutw9PBBk # sha256 in base58
 EiCcvAfD+ZFyWDajqipYHKICkZiqQgudmbwOEx2fPiy+Rw== # sha256 in base64
 ```
 
+Note: You should consider using [multibase](https://github.com/multiformats/multibase) to base-encode these hashes instead of base-encoding them directly.
+
 ## Format
 
 ```
@@ -67,11 +69,11 @@ Because aesthetically I prefer the code first. You already have to write your st
 
 > Why varints?
 
-So that we have no limitation on functions or lengths. Implementation note: you do not need to implement varints until the standard multihash table has more than 127 functions.
+So that we have no limitation on functions or lengths.
 
 > What kind of varints?
 
-An Most Significant Bit unsigned varint, as defined by the [multiformats/unsigned-varint](https://github.com/multiformats/unsigned-varint).
+An Most Significant Bit unsigned varint (also called base-128 varints), as defined by the [multiformats/unsigned-varint](https://github.com/multiformats/unsigned-varint).
 
 > Don't we have to agree on a table of functions?
 
@@ -100,9 +102,11 @@ Yes, but we already have to agree on functions, so this is not hard. The table e
 - [php-multihash](//github.com/Fil/php-multihash)
 - [net-ipfs-core](//github.com/richardschneider/net-ipfs-core)
 
-## Table for Multihash v1.0.0-RC (semver)
+## Table for Multihash
 
-The current multihash table is [here](hashtable.csv).
+We use a single [multicodec](https://github.com/multiformats/multicodec) table across all of our multiformat projects. The shared namespace reduces the chances of accidentally interpreting a code in the wrong context.
+
+The current table lives [here](https://github.com/multiformats/multicodec/blob/master/table.csv)
 
 ### Other Tables
 
