@@ -82,7 +82,7 @@ Yes, but we already have to agree on functions, so this is not hard. The table e
 ## Implementations:
 
 - [go-multihash](//github.com/multiformats/go-multihash)
-- [kotliln-multihash](//github.com/changjiashuai/kotlin-multihash)
+- [kotlin-multihash](//github.com/changjiashuai/kotlin-multihash)
 - java-multihash
   - [multiformats/java-multihash](//github.com/multiformats/java-multihash)
   - [comodal/hash-overlay](//github.com/comodal/hash-overlay)
