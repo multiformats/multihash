@@ -16,7 +16,7 @@ It is useful to write applications that future-proof their use of hashes, and al
 - [Example](#example)
 - [Format](#format)
 - [Implementations:](#implementations)
-- [Table for Multihash v1.0.0-RC (semver)](#table-for-multihash-v100-rc-semver)
+- [Table for Multihash](#table-for-multihash)
   - [Other Tables](#other-tables)
 - [Disclaimers](#disclaimers)
 - [Visual Examples](#visual-examples)
