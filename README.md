@@ -157,10 +157,6 @@ These are visual aids that help tell the story of why Multihash matters.
 
 ![](https://raw.githubusercontent.com/multiformats/multiformats/eb22cd807db692877a9094b5bfb4d2997fd0278a/img/multihash.008.jpg)
 
-## Maintainers
-
-Captain: [@jbenet](https://github.com/jbenet).
-
 ## Contribute
 
 Contributions welcome. Please check out [the issues](https://github.com/multiformats/multihash/issues).
