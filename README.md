@@ -130,35 +130,35 @@ Warning: **obviously multihash values bias the first two bytes**. Do not expect 
 
 These are visual aids that help tell the story of why Multihash matters.
 
-![](https://raw.githubusercontent.com/multiformats/multiformats/eb22cd807db692877a9094b5bfb4d2997fd0278a/img/multihash.001.jpg)
+![](https://raw.githubusercontent.com/multiformats/multihash/master/img/multihash.001.jpg)
 
 #### Consider these 4 different hashes of same input
 
-![](https://raw.githubusercontent.com/multiformats/multiformats/eb22cd807db692877a9094b5bfb4d2997fd0278a/img/multihash.002.jpg)
+![](https://raw.githubusercontent.com/multiformats/multihash/master/img/multihash.002.jpg)
 
 #### Same length: 256 bits
 
-![](https://raw.githubusercontent.com/multiformats/multiformats/eb22cd807db692877a9094b5bfb4d2997fd0278a/img/multihash.003.jpg)
+![](https://raw.githubusercontent.com/multiformats/multihash/master/img/multihash.003.jpg)
 
 #### Different hash functions
 
-![](https://raw.githubusercontent.com/multiformats/multiformats/eb22cd807db692877a9094b5bfb4d2997fd0278a/img/multihash.004.jpg)
+![](https://raw.githubusercontent.com/multiformats/multihash/master/img/multihash.004.jpg)
 
 #### Idea: self-describe the values to distinguish
 
-![](https://raw.githubusercontent.com/multiformats/multiformats/eb22cd807db692877a9094b5bfb4d2997fd0278a/img/multihash.005.jpg)
+![](https://raw.githubusercontent.com/multiformats/multihash/master/img/multihash.005.jpg)
 
 #### Multihash: fn code + length prefix
 
-![](https://raw.githubusercontent.com/multiformats/multiformats/eb22cd807db692877a9094b5bfb4d2997fd0278a/img/multihash.006.jpg)
+![](https://raw.githubusercontent.com/multiformats/multihash/master/img/multihash.006.jpg)
 
 #### Multihash: a pretty good multiformat
 
-![](https://raw.githubusercontent.com/multiformats/multiformats/eb22cd807db692877a9094b5bfb4d2997fd0278a/img/multihash.007.jpg)
+![](https://raw.githubusercontent.com/multiformats/multihash/master/img/multihash.007.jpg)
 
 #### Multihash: has a bunch of implementations already
 
-![](https://raw.githubusercontent.com/multiformats/multiformats/eb22cd807db692877a9094b5bfb4d2997fd0278a/img/multihash.008.jpg)
+![](https://raw.githubusercontent.com/multiformats/multihash/master/img/multihash.008.jpg)
 
 ## Maintainers
 
