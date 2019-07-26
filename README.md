@@ -104,6 +104,7 @@ Yes, but we already have to agree on functions, so this is not hard. The table e
 - [php-multihash](//github.com/Fil/php-multihash)
 - [net-ipfs-core](//github.com/richardschneider/net-ipfs-core)
 - [cpp-multihash](//github.com/cpp-ipfs/cpp-multihash)
+- [nim-libp2p](//github.com/status-im/nim-libp2p)
 
 ## Table for Multihash
 
