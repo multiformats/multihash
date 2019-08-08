@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 import os
 import sys
@@ -23,7 +23,7 @@ def usage(code):
 
 def multihash(val, alg, size):
   cmd = "multihash -a %s -l %d -e hex -q" %  (alg, size)
-  proc = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
+  proc = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stdin=subprocess.PIPE)
   (out, err) = proc.communicate(val)
 
   # failed to process multihash
