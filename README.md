@@ -73,7 +73,7 @@ So that we have no limitation on functions or lengths.
 
 > What kind of varints?
 
-An Most Significant Bit unsigned varint (also called base-128 varints), as defined by the [multiformats/unsigned-varint](https://github.com/multiformats/unsigned-varint).
+A Most Significant Bit unsigned varint (also called base-128 varints), as defined by the [multiformats/unsigned-varint](https://github.com/multiformats/unsigned-varint).
 
 > Don't we have to agree on a table of functions?
 
