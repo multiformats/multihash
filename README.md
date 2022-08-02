@@ -95,6 +95,7 @@ Yes, but we already have to agree on functions, so this is not hard. The table e
 - python-multihash
   - [multiformats/py-multihash](//github.com/multiformats/py-multihash)
   - [ivilata/pymultihash](//github.com/ivilata/pymultihash)
+  - `multihash` sub-module of Python module [multiformats](//github.com/hashberg-io/multiformats)
 - [elixir-multihash](//github.com/zabirauf/ex_multihash), [elixir-multihashing](//github.com/candeira/ex_multihashing)
 - swift-multihash
   - [by @multiformats](//github.com/multiformats/SwiftMultihash)
