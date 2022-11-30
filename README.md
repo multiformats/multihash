@@ -13,16 +13,25 @@ It is useful to write applications that future-proof their use of hashes, and al
 
 ## Table of Contents
 
-- [Example](#example)
-- [Format](#format)
-- [Implementations:](#implementations)
-- [Table for Multihash](#table-for-multihash)
-  - [Other Tables](#other-tables)
-- [Disclaimers](#disclaimers)
-- [Visual Examples](#visual-examples)
-- [Maintainers](#maintainers)
-- [Contribute](#contribute)
-- [License](#license)
+- [multihash](#multihash)
+  - [Table of Contents](#table-of-contents)
+  - [Example](#example)
+  - [Format](#format)
+  - [Implementations:](#implementations)
+  - [Table for Multihash](#table-for-multihash)
+    - [Other Tables](#other-tables)
+  - [Disclaimers](#disclaimers)
+  - [Visual Examples](#visual-examples)
+      - [Consider these 4 different hashes of same input](#consider-these-4-different-hashes-of-same-input)
+      - [Same length: 256 bits](#same-length-256-bits)
+      - [Different hash functions](#different-hash-functions)
+      - [Idea: self-describe the values to distinguish](#idea-self-describe-the-values-to-distinguish)
+      - [Multihash: fn code + length prefix](#multihash-fn-code--length-prefix)
+      - [Multihash: a pretty good multiformat](#multihash-a-pretty-good-multiformat)
+      - [Multihash: has a bunch of implementations already](#multihash-has-a-bunch-of-implementations-already)
+  - [Maintainers](#maintainers)
+  - [Contribute](#contribute)
+  - [License](#license)
 
 ## Example
 
@@ -81,35 +90,38 @@ Yes, but we already have to agree on functions, so this is not hard. The table e
 
 ## Implementations:
 
+- [clj-multihash](//github.com/multiformats/clj-multihash)
+- [cpp-multihash](//github.com/cpp-ipfs/cpp-multihash)
+- [dart-multihash](https://github.com/dwyl/dart_multihash)
+- elixir-multihash
+  - [elixir-multihash](//github.com/zabirauf/ex_multihash)
+  - [elixir-multihashing](//github.com/candeira/ex_multihashing)
 - [go-multihash](//github.com/multiformats/go-multihash)
-- [kotlin-multihash](//github.com/changjiashuai/kotlin-multihash)
+- [haskell-multihash](//github.com/LukeHoersten/multihash)
+- [js-multihash](//github.com/multiformats/js-multihash)
 - java-multihash
   - [multiformats/java-multihash](//github.com/multiformats/java-multihash)
   - [comodal/hash-overlay](//github.com/comodal/hash-overlay)
-- [js-multihash](//github.com/multiformats/js-multihash)
-- [clj-multihash](//github.com/multiformats/clj-multihash)
-- rust-multihash
-  - [by @multiformats](//github.com/multiformats/rust-multihash)
-  - [by @google](//github.com/google/rust-multihash)
-- [haskell-multihash](//github.com/LukeHoersten/multihash)
+- [kotlin-multihash](//github.com/changjiashuai/kotlin-multihash)
+- net-multihash
+  - [cs-multihash](//github.com/multiformats/cs-multihash)
+  - [MultiHash.Net](//github.com/MCGPPeters/MultiHash.Net)
+  - [net-ipfs-core](//github.com/richardschneider/net-ipfs-core)
+- [nim-libp2p](//github.com/status-im/nim-libp2p)
+- [ocaml-multihash](//github.com/patricoferris/ocaml-multihash)
+- [php-multihash](//github.com/Fil/php-multihash)
 - python-multihash
   - [multiformats/py-multihash](//github.com/multiformats/py-multihash)
   - [ivilata/pymultihash](//github.com/ivilata/pymultihash)
   - `multihash` sub-module of Python module [multiformats](//github.com/hashberg-io/multiformats)
-- [elixir-multihash](//github.com/zabirauf/ex_multihash), [elixir-multihashing](//github.com/candeira/ex_multihashing)
+- [ruby-multihash](//github.com/neocities/ruby-multihash)
+- rust-multihash
+  - [by @multiformats](//github.com/multiformats/rust-multihash)
+  - [by @google](//github.com/google/rust-multihash)
+- [scala-multihash](//github.com/mediachain/scala-multihash)
 - swift-multihash
   - [by @multiformats](//github.com/multiformats/SwiftMultihash)
   - [by @yeeth](//github.com/yeeth/Multihash.swift)
-- [ruby-multihash](//github.com/neocities/ruby-multihash)
-- [MultiHash.Net](//github.com/MCGPPeters/MultiHash.Net)
-- [cs-multihash](//github.com/multiformats/cs-multihash)
-- [scala-multihash](//github.com/mediachain/scala-multihash)
-- [php-multihash](//github.com/Fil/php-multihash)
-- [net-ipfs-core](//github.com/richardschneider/net-ipfs-core)
-- [cpp-multihash](//github.com/cpp-ipfs/cpp-multihash)
-- [nim-libp2p](//github.com/status-im/nim-libp2p)
-- [ocaml-multihash](//github.com/patricoferris/ocaml-multihash)
-- [dart-multihash](https://github.com/dwyl/dart_multihash)
 
 ## Table for Multihash
 
