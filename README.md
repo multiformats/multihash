@@ -81,6 +81,8 @@ Yes, but we already have to agree on functions, so this is not hard. The table e
 
 ## Implementations:
 
+<!-- Note: Please add implementations to this list alphabetically. Thanks! -->
+
 - [clj-multihash](//github.com/multiformats/clj-multihash)
 - [cpp-multihash](//github.com/cpp-ipfs/cpp-multihash)
 - [dart-multihash](https://github.com/dwyl/dart_multihash)
