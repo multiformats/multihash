@@ -109,6 +109,7 @@ Yes, but we already have to agree on functions, so this is not hard. The table e
 - [cpp-multihash](//github.com/cpp-ipfs/cpp-multihash)
 - [nim-libp2p](//github.com/status-im/nim-libp2p)
 - [ocaml-multihash](//github.com/patricoferris/ocaml-multihash)
+- [dart-multihash](https://github.com/dwyl/dart_multihash)
 
 ## Table for Multihash
 
