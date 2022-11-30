@@ -13,25 +13,16 @@ It is useful to write applications that future-proof their use of hashes, and al
 
 ## Table of Contents
 
-- [multihash](#multihash)
-  - [Table of Contents](#table-of-contents)
-  - [Example](#example)
-  - [Format](#format)
-  - [Implementations:](#implementations)
-  - [Table for Multihash](#table-for-multihash)
-    - [Other Tables](#other-tables)
-  - [Disclaimers](#disclaimers)
-  - [Visual Examples](#visual-examples)
-      - [Consider these 4 different hashes of same input](#consider-these-4-different-hashes-of-same-input)
-      - [Same length: 256 bits](#same-length-256-bits)
-      - [Different hash functions](#different-hash-functions)
-      - [Idea: self-describe the values to distinguish](#idea-self-describe-the-values-to-distinguish)
-      - [Multihash: fn code + length prefix](#multihash-fn-code--length-prefix)
-      - [Multihash: a pretty good multiformat](#multihash-a-pretty-good-multiformat)
-      - [Multihash: has a bunch of implementations already](#multihash-has-a-bunch-of-implementations-already)
-  - [Maintainers](#maintainers)
-  - [Contribute](#contribute)
-  - [License](#license)
+- [Example](#example)
+- [Format](#format)
+- [Implementations:](#implementations)
+- [Table for Multihash](#table-for-multihash)
+  - [Other Tables](#other-tables)
+- [Disclaimers](#disclaimers)
+- [Visual Examples](#visual-examples)
+- [Maintainers](#maintainers)
+- [Contribute](#contribute)
+- [License](#license)
 
 ## Example
 
@@ -140,7 +131,7 @@ They disagree. :(
 
 ## Disclaimers
 
-Warning: **obviously multihash values bias the first two bytes**. Do not expect them to be uniformly distributed. The entropy size is `len(multihash) - 2`. Skip the first two bytes when using them with bloom filters, etc. Why not _ap_pend instead of _pre_pend? Because when reading a stream of hashes, you can know the length of the whole value, and allocate the right amount of memory, skip it, or discard it.
+Warning: **obviously multihash values bias the first two bytes**. Do not expect them to be uniformly distributed. The entropy size is `len(multihash) - 2`. Skip the first two bytes when using them with bloom filters, etc. Why not \_ap_pend instead of \_pre_pend? Because when reading a stream of hashes, you can know the length of the whole value, and allocate the right amount of memory, skip it, or discard it.
 
 **Obsolete and deprecated hash functions are included** in this list. [MD4](https://en.wikipedia.org/wiki/MD4), [MD5](https://en.wikipedia.org/wiki/MD5) and [SHA-1](https://en.wikipedia.org/wiki/SHA-1) should no longer be used for cryptographic purposes, but since many such hashes already exist they are included in this specification and may be implemented in multihash libraries.
 
