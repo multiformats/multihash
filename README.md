@@ -13,12 +13,16 @@ It is useful to write applications that future-proof their use of hashes, and al
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [Example](#example)
 - [Format](#format)
-- [Implementations:](#implementations)
+- [Implementations](#implementations)
 - [Table for Multihash](#table-for-multihash)
   - [Other Tables](#other-tables)
-- [Disclaimers](#disclaimers)
+- [Notes](#notes)
+  - [Multihash and randomness](#multihash-and-randomness)
+  - [Insecure / obsolete hash functions](#insecure--obsolete-hash-functions)
+  - [Non-cryptographic hash functions](#non-cryptographic-hash-functions)
 - [Visual Examples](#visual-examples)
 - [Maintainers](#maintainers)
 - [Contribute](#contribute)
