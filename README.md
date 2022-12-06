@@ -83,7 +83,7 @@ A Most Significant Bit unsigned varint (also called base-128 varints), as define
 
 Yes, but we already have to agree on functions, so this is not hard. The table even leaves some room for custom function codes.
 
-## Implementations:
+## Implementations
 
 <!-- Note: Please add implementations to this list alphabetically. Thanks! -->
 
