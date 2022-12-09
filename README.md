@@ -13,12 +13,16 @@ It is useful to write applications that future-proof their use of hashes, and al
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [Example](#example)
 - [Format](#format)
-- [Implementations:](#implementations)
+- [Implementations](#implementations)
 - [Table for Multihash](#table-for-multihash)
   - [Other Tables](#other-tables)
-- [Disclaimers](#disclaimers)
+- [Notes](#notes)
+  - [Multihash and randomness](#multihash-and-randomness)
+  - [Insecure / obsolete hash functions](#insecure--obsolete-hash-functions)
+  - [Non-cryptographic hash functions](#non-cryptographic-hash-functions)
 - [Visual Examples](#visual-examples)
 - [Maintainers](#maintainers)
 - [Contribute](#contribute)
@@ -79,7 +83,7 @@ A Most Significant Bit unsigned varint (also called base-128 varints), as define
 
 Yes, but we already have to agree on functions, so this is not hard. The table even leaves some room for custom function codes.
 
-## Implementations:
+## Implementations
 
 <!-- Note: Please add implementations to this list alphabetically. Thanks! -->
 
@@ -118,7 +122,7 @@ Yes, but we already have to agree on functions, so this is not hard. The table e
 
 ## Table for Multihash
 
-We use a single [multicodec](https://github.com/multiformats/multicodec) table across all of our multiformat projects. The shared namespace reduces the chances of accidentally interpreting a code in the wrong context.
+We use a single [Multicodec](https://github.com/multiformats/multicodec) table across all of our multiformat projects. The shared namespace reduces the chances of accidentally interpreting a code in the wrong context. Multihash entries are identified with a `multihash` value in the `tag` column.
 
 The current table lives [here](https://github.com/multiformats/multicodec/blob/master/table.csv)
 
@@ -131,11 +135,19 @@ Cannot find a good standard on this. Found some _different_ IANA ones:
 
 They disagree. :(
 
-## Disclaimers
+## Notes
 
-Warning: **obviously multihash values bias the first two bytes**. Do not expect them to be uniformly distributed. The entropy size is `len(multihash) - 2`. Skip the first two bytes when using them with bloom filters, etc. Why not _ap_pend instead of _pre_pend? Because when reading a stream of hashes, you can know the length of the whole value, and allocate the right amount of memory, skip it, or discard it.
+### Multihash and randomness
+
+**Obviously multihash values bias the first two bytes**. Do not expect them to be uniformly distributed. The entropy size is `len(multihash) - 2`. Skip the first two bytes when using them with bloom filters, etc. Why not _ap_pend instead of _pre_pend? Because when reading a stream of hashes, you can know the length of the whole value, and allocate the right amount of memory, skip it, or discard it.
+
+### Insecure / obsolete hash functions
 
 **Obsolete and deprecated hash functions are included** in this list. [MD4](https://en.wikipedia.org/wiki/MD4), [MD5](https://en.wikipedia.org/wiki/MD5) and [SHA-1](https://en.wikipedia.org/wiki/SHA-1) should no longer be used for cryptographic purposes, but since many such hashes already exist they are included in this specification and may be implemented in multihash libraries.
+
+### Non-cryptographic hash functions
+
+Multihash is intended for *"well-established cryptographic hash functions"* as **non-cryptographic hash functions are not suitable for content addressing systems**. However, there may be use-cases where it is desireable to identify non-cryptographic hash functions or their digests by use of a multihash. Non-cryptographic hash functions are identified in the [Multicodec table](https://github.com/multiformats/multicodec/blob/master/table.csv) with a tag `hash` value in the `tag` column.
 
 ## Visual Examples
 
