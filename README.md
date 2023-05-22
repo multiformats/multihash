@@ -95,7 +95,9 @@ Yes, but we already have to agree on functions, so this is not hard. The table e
   - [elixir-multihashing](//github.com/candeira/ex_multihashing)
 - [go-multihash](//github.com/multiformats/go-multihash)
 - [haskell-multihash](//github.com/LukeHoersten/multihash)
-- [js-multihash](//github.com/multiformats/js-multihash)
+- js-multihash
+  - [js-multiformats](//github.com/multiformats/js-multiformats)
+  - [js-multihash](//github.com/multiformats/js-multihash) (archived)
 - java-multihash
   - [multiformats/java-multihash](//github.com/multiformats/java-multihash)
   - [comodal/hash-overlay](//github.com/comodal/hash-overlay)
