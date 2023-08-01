@@ -101,7 +101,9 @@ Yes, but we already have to agree on functions, so this is not hard. The table e
 - java-multihash
   - [multiformats/java-multihash](//github.com/multiformats/java-multihash)
   - [comodal/hash-overlay](//github.com/comodal/hash-overlay)
-- [kotlin-multihash](//github.com/changjiashuai/kotlin-multihash)
+- kotlin-multihash
+  - [kotlin-multihash](//github.com/changjiashuai/kotlin-multihash)
+  - [multiformat](https://github.com/erwin-kok/multiformat)
 - net-multihash
   - [cs-multihash](//github.com/multiformats/cs-multihash)
   - [MultiHash.Net](//github.com/MCGPPeters/MultiHash.Net)
