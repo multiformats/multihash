@@ -144,7 +144,7 @@ The current table lives [here](https://github.com/multiformats/multicodec/blob/m
 
 In IETF's corpus of normative protocols, there are two partial overlaps worth knowing about to ensure a safe implementation:
 
-* "Named Information Hash", a.k.a. [RFC-6920](https://datatracker.ietf.org/doc/html/rfc6920), defines an heirarchical URI scheme for content-identifiers, partitioned by enumerated hash functions. The [NIH registry][] at IANA contains all of these.
+* "Named Information Hash", a.k.a. [RFC-6920](https://datatracker.ietf.org/doc/html/rfc6920), defines an hierarchical URI scheme for content-identifiers, partitioned by enumerated hash functions. The [NIH registry][] at IANA contains all of these.
 * UUIDv5, aka "Namespaced UUIDs", defined in [RFC-9562](https://datatracker.ietf.org/doc/html/rfc9562#uuidv5), does the inverse, defining a universal namespace for one hash function, partitioned by the application of that function to multiple URI schemes (i.e. DNS names, valid URLs, etc.)
 * The IANA [NIH registry][] has a similar shape and governance mode to the IANA [hashAlgorithm registry][] that TLS 1.2 implementations use to compactly signal supported hash+signature combinations. Since the former has different entries for some hash functions based on output length and the latter does not, the two registries are not alignable. However, given their different contexts, collisions between the two would not be a practical concern for users of either.
 
