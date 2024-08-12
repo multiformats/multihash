@@ -156,12 +156,12 @@ Its syntactic similarity to HTTP headers and [support for](https://datatracker.i
 
 #### Translation from multihash to named-information hash
 
-Translating from a bare, binary multihash (i.e., a hash value in `unsigned_varint`, a.k.a. ULEB128 format) to a named-information hash in binary format is fairly easy to do insofar as a generic tag for self-describing multihashes was proposed to the [NIH registry][] by [Appendix B](https://www.ietf.org/archive/id/draft-multiformats-multihash-03.html#appendix-D.2) in the 2021 [multihash internet draft](https://www.ietf.org/archive/id/draft-multiformats-multihash-03.html):
+Translating from a bare, binary multihash (i.e., a hash value in [`unsigned_varint`](https://github.com/multiformats/unsigned-varint) format, i.e. a minimally-encoded ULEB128 under 64 bits in total length) to a named-information hash in binary format is fairly easy to do insofar as a generic tag for self-describing multihashes was proposed to the [NIH registry][] by [Appendix B](https://www.ietf.org/archive/id/draft-multiformats-multihash-03.html#appendix-D.2) in the 2021 [multihash internet draft](https://www.ietf.org/archive/id/draft-multiformats-multihash-03.html):
 
 1. Strip the prefix bytes from the hash value and use the prefix bytes to identity the hash function used from the [Multicodec][] table
 2. If multihash prefix corresponds to any tags in the [NIH registry][]:
   1. translate multicodec tag to NIH tag, i.e., if `0x12` (`sha2-256`) in `multicodec` registry, then `0x01` (`sha256`) in `named-information` registry
-  2. transcode the hash value from ULEB128 to standard MSB binary
+  2. transcode the hash value from [`unsigned varint`](https://github.com/multiformats/unsigned-varint) to standard MSB binary
   3. (for binary form:) reattach new prefix to transcoded hash value
   4. (for ASCII form:) convert prefix to URL format, i.e., `ni:///sha-256;` for `0x01`, and reattach to base64-encoded transcoded hash value
 3. If multihash prefix does NOT map cleanly to a registered value in [NIH registry][]:
