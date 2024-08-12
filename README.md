@@ -152,7 +152,7 @@ In IETF's corpus of normative protocols, there are two partial overlaps worth kn
 
 The "Named Information Hash" URI scheme allows for minimally self-describing hash strings to serve as content-identifiers for arbitrary binary inputs.
 This lightweight identifier scheme is defined in [RFC-6920](https://datatracker.ietf.org/doc/html/rfc6920) and the supported hash-context prefixes live in an IANA registry named ["https://www.iana.org/assignments/named-information/named-information.xhtml#hash-alg"](https://www.iana.org/assignments/named-information/named-information.xhtml#hash-alg).
-Its syntactic similarity to HTTP headers and [support for](https://datatracker.ietf.org/doc/html/rfc6920#section-3.1), MIME content-types makes it potentially useful for web use-cases, but use-cases are not constrained by URI scheme, only hinted at by the specification in sections 3 through 7.
+Its syntactic similarity to HTTP headers and [support for MIME content-types](https://datatracker.ietf.org/doc/html/rfc6920#section-3.1) makes it potentially useful for web use-cases, but use-cases are not constrained by URI scheme, only hinted at by the specification in sections 3 through 7.
 
 #### Translation from multihash to named-information hash
 
