@@ -168,10 +168,6 @@ Translating from a bare, binary multihash (i.e., a hash value in [`unsigned_vari
    1. (for binary form:) prefix existing binary multihash with `0x42` to designate that what follows is a multicodec prefix followed by an ULEB128 hash value.
    2. (for ASCII form:) convert the `0x42` prefix to URL format, i.e., `ni:///mh;` and then append a base64url, no-padding encoding of the entire binary multihash with prefix (and _without_ adding the additional base-64-url-no-padding prefix, `u`, if using a [multibase][] library for this base-encoding).
 
-Note that raw multihashes (i.e. multihashes directly taken from hashing inputs) are not commonly used in IPFS implementations, since inputs are usually broken up into an intermediary form before being hashed.
-Only "single-block" CIDs, which are directly produced from inputs without file-system conversion, can be converted as described above; these are usually used for blobs below a certain size, typically using `raw` or `json` or other non-IPLD tags to mark their referents as only one-layer deep.
-To translate between CIDs that dereference to an IPLD graph or other recursive structure, you must first reconstruct the inputs and re-encode a new CID using `raw` codec and no chunking structure, indirection, recursion, or outer envelope.
-
 ### Namespaced UUIDs
 
 Since the "Named Information Hash" URI scheme conforms to URL syntax (with or without an authority), each valid Named Information Hash URI can be assumed to be unique within the namespace of all valid URLs.
