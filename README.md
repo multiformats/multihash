@@ -241,7 +241,7 @@ The [Prior Art and Translation](#prior-art-and-translation) section is heavily i
 
 [multicodec]: https://github.com/multiformats/multicodec
 [NIH registry]: https://www.iana.org/assignments/named-information/named-information.xhtml#hash-alg
-[hashAlgorith registry]: https://www.iana.org/assignments/tls-parameters/tls-parameters.xhtml#tls-parameters-18
+[hashAlgorithm registry]: https://www.iana.org/assignments/tls-parameters/tls-parameters.xhtml#tls-parameters-18
 
 ## License
 
