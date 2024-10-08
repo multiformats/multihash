@@ -100,6 +100,7 @@ Yes, but we already have to agree on functions, so this is not hard. The table e
   - [js-multihash](//github.com/multiformats/js-multihash) (archived)
 - java-multihash
   - [multiformats/java-multihash](//github.com/multiformats/java-multihash)
+  - [copper multicodec and multihash](https://github.com/filip26/copper-multicodec)
   - [comodal/hash-overlay](//github.com/comodal/hash-overlay)
 - kotlin-multihash
   - [kotlin-multihash](//github.com/changjiashuai/kotlin-multihash)
