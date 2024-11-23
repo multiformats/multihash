@@ -124,6 +124,7 @@ Yes, but we already have to agree on functions, so this is not hard. The table e
 - swift-multihash
   - [by @multiformats](//github.com/multiformats/SwiftMultihash)
   - [by @yeeth](//github.com/yeeth/Multihash.swift)
+- [zig-multihash](https://github.com/optimism-java/multiformats-zig)
 
 ## Table for Multihash
 
