@@ -127,9 +127,7 @@ Yes, but we already have to agree on functions, so this is not hard. The table e
 
 ## Table for Multihash
 
-We use a single [Multicodec](https://github.com/multiformats/multicodec) table across all of our multiformat projects. The shared namespace reduces the chances of accidentally interpreting a code in the wrong context. Multihash entries are identified with a `multihash` value in the `tag` column.
-
-The current table lives [here](https://github.com/multiformats/multicodec/blob/master/table.csv)
+We use a single [Multicodec](https://github.com/multiformats/multicodec) [table](https://github.com/multiformats/multicodec/blob/master/table.csv) across all of our multiformat projects. The shared namespace reduces the chances of accidentally interpreting a code in the wrong context. Multihash entries are identified with a `multihash` value in the `tag` column.
 
 ### Other Tables
 
