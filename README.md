@@ -123,6 +123,7 @@ Yes, but we already have to agree on functions, so this is not hard. The table e
 - swift-multihash
   - [by @multiformats](//github.com/multiformats/SwiftMultihash)
   - [by @yeeth](//github.com/yeeth/Multihash.swift)
+  - [by @ATProtoKit](https://github.com/ATProtoKit/MultiformatsKit)
 - [zig-multihash](https://github.com/zen-eth/multiformats-zig)
 
 ## Table for Multihash
